@@ -2,12 +2,15 @@ package spring.umc.domain.member.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import spring.umc.domain.member.entity.mapping.MemberFood;
 import spring.umc.domain.member.enums.Gender;
 import spring.umc.domain.member.enums.SocialType;
 import spring.umc.global.entity.BaseEntity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Builder
@@ -52,4 +55,7 @@ public class Member extends BaseEntity {
 
     @Column(name = "deleted_at")
     private LocalDateTime deletedAt;
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.REMOVE)
+    private List<MemberFood> memberFoodList = new ArrayList<>();
 }

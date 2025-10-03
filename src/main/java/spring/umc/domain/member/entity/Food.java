@@ -16,5 +16,6 @@ public class Food {
     private Long id;
 
     @Column(name = "name", length = 10, nullable = false)
+    @Enumerated(EnumType.STRING)
     private FoodName foodName;
 }

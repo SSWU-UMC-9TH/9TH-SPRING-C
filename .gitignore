@@ -1,0 +1,12 @@
+# IDE
+.idea/
+.gradle/
+
+#MacOS
+.DS_Store
+
+# Build outputs
+build/
+out/
+
+application-secret.properties

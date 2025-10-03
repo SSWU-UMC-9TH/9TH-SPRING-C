@@ -6,7 +6,6 @@ import spring.umc.domain.member.entity.mapping.MemberFood;
 import spring.umc.domain.member.enums.Gender;
 import spring.umc.domain.member.enums.SocialType;
 import spring.umc.domain.mission.entity.mapping.MemberMission;
-import spring.umc.domain.review.entity.Review;
 import spring.umc.global.entity.BaseEntity;
 
 import java.time.LocalDate;

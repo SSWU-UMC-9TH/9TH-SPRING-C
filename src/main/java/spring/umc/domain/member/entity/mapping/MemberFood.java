@@ -10,7 +10,7 @@ import spring.umc.domain.member.entity.Member;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
-@Table(name = "membedr_food")
+@Table(name = "member_food")
 public class MemberFood {
 
     @Id

@@ -14,7 +14,9 @@ import spring.umc.domain.alarm.entity.AlarmSetting;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -67,4 +69,10 @@ public class User extends BaseTimeEntity {
 
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<PreferredFood> preferredFoods = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AlarmSetting>  alarmSettings = new ArrayList<>();
 }
